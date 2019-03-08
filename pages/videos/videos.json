@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#E84A4C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "组织",
+  "backgroundColor": "#fff",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false
+}

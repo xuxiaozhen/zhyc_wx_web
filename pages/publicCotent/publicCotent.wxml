@@ -1,0 +1,20 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<!-- 党内公示的详情页面 -->
+<view class="container">
+
+  <!-- 标题部分 -->
+  <view class="title">
+    <text>{{ articleMsg.articlename }}</text>
+  </view>
+
+  <!-- 内容区域，是需要被解析的HTML代码 -->
+  <view class="content">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+
+  <!-- 发布时间与发布作者 -->
+  <view class="msg-box">
+    <text>{{ articleMsg.deptname }}部</text>
+    <text>{{ articleMsg.fbsj }}</text>
+  </view>
+</view>

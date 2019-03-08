@@ -1,0 +1,14 @@
+<!--pages/ReadCount/readCount.wxml-->
+<view class="announce">
+           <view class='xian'></view>
+            <view class="name">阅读情况</view>
+          </view>
+
+        <navigator class='Divnote' wx:for="{{readList}}">
+            <view class='title'>{{item.DEPTID}}</view>
+            <view class='noticeTime'>
+              <text class='come'>{{item.U_DATE}}</text> 
+              <view class='time'>{{item.U_DATE}}</view>
+            </view>
+             </navigator>
+       

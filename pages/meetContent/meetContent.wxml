@@ -1,0 +1,40 @@
+<!--  党员考核页面  -->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="container">
+  <view class="title">会议详情</view>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">已参与会议</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">未参与会议</view>
+        <!-- <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">年度</view> -->
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+     <!-- 每一个滑块中的内容 -->
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <view class='detail' wx:for="{{JoinmeetList}}">       
+                <view class='date'>{{item.name}}</view>
+                <view class='content'>
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                </view>
+                </view> 
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <view class='detail' wx:for="{{UnJoinmeetList}}">       
+                <view class='date'>{{item.name}}</view>
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                </view>
+            </scroll-view>
+        </swiper-item>
+
+        <!-- <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+                cccccccccccccccc
+            </scroll-view>
+        </swiper-item> -->
+        
+    </swiper>
+</view>

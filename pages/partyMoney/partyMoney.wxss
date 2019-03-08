@@ -1,0 +1,30 @@
+.title {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 50rpx;
+  font-size: 25px;
+}
+
+/* 打钱用的二维码样式 */
+.qr-code {
+  width: 600rpx;
+  height: 600rpx;
+  background-color: pink;
+  margin: 40rpx auto;
+}
+
+/* 底部的文字说明 */
+.explanation text {
+  padding: 0;
+  color: #ADADAD;
+  font-size: 16px;
+}

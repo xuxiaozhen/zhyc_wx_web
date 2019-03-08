@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="title">任务管理</view>
+
+  <!-- 任务管理内容区域 -->
+  <view class="task-content">
+    <view class="h-m">
+      <view class="header">
+        <text>年度会议情况</text>
+      </view>
+      <view class="main">
+        <text>会议参与次数：{{taskmanagementmsg.data.hy_cy_num}}次</text>
+        <text decode="true">本年度已召开会议&nbsp;&nbsp;{{taskmanagementmsg.data.hy_total_num}}次</text>
+        <text hidden="{{hiddenName}}" style='color:red'>您有会议缺席</text>
+      </view>
+    </view>
+    <view class="footer">
+      <text>详细内容</text>
+      <navigator url='../meetContent/meetContent'>查看详情</navigator>
+      <image src="../../icons/right-back.png"></image>
+    </view>
+  </view>
+  <view class="task-content">
+    <view class="h-m">
+      <view class="header">
+        <text>年度微党校课程情况</text>
+      </view>
+      <view class="main">
+        <!-- <text>课程学习进度：</text> -->
+        <text decode="true">您共阅读文章&nbsp;&nbsp;{{taskmanagementmsg.data.yd_total_num}}次</text>
+        <text>总计阅读时间：{{taskmanagementmsg.data.yd_time_num}}分钟</text>
+      </view>
+    </view>
+    <view class="footer">
+      <text>详细内容</text>
+      <navigator url='../lessonContent/lessonContent'>查看详情</navigator>
+      <image src="../../icons/right-back.png"></image>
+    </view>
+  </view>
+  <view class="task-content">
+    <view class="h-m">
+      <view class="header">
+        <text>年度专题教育情况</text>
+      </view>
+      <view class="main">
+        <text>阅读专题文章：{{taskmanagementmsg.data.yd_zr_num}}次</text>
+        <!-- <text>您阅读的文章数量已超过的人</text> -->
+      </view>
+    </view>
+    <view class="footer">
+      <text>详细内容</text>
+      <navigator url='../articleContent/articleContent'>查看详情</navigator>
+      <image src="../../icons/right-back.png"></image>
+    </view>
+  </view>
+</view>

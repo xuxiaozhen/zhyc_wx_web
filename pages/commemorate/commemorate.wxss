@@ -1,0 +1,32 @@
+.content {
+  position: relative;
+  padding: 1rpx;
+}
+.content image {
+  width: 100%;
+  background-color: pink;
+  height: 1217rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -114514;
+}
+.content .message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 49%;
+}
+.message .date, .message .days {
+  font-size: 100rpx;
+}
+.message text {
+  color: #fff;
+}
+.message .date {
+  margin-bottom: 10%;
+}
+.message .tian {
+  font-size: 35rpx;
+}

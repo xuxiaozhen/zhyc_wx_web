@@ -1,0 +1,23 @@
+<!--pages/addAlbum/addAlbum.wxml-->
+<!-- 添加照片页面 -->
+<view class="container">
+    <text>相册名称</text>
+  <view class="title">
+
+    <input type='text'  bindinput='getalbumName' placeholder='' value='{{albumName}}'/>
+  </view>
+    <text>相册介绍</text>
+
+  <view class="title">
+<input type='text'  bindinput='getalbumIntroduce' placeholder='' value='{{albumIntroduce}}'/>
+      
+  </view>
+   <text>创建时间</text>
+  <view class="title">
+
+    <input type='text' placeholder=''/>
+  </view>
+
+  <!-- 提交按钮 -->
+  <button class="submit" type="primary" bindtap='submit'>提交</button>
+</view>

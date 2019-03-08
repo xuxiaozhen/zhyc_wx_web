@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="content">
+    <image src="../../icons/commemorateGBI2.png"></image>
+
+    <view class="message">
+      <text>您的入党生日是：</text>
+      <text class="date">{{userinfo.enterparty}}</text>
+      <text>您已加入中国共产党：</text>
+      <text class="days">{{day}}<text class="tian">天</text></text>
+    </view>
+  </view>
+</view>

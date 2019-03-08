@@ -1,0 +1,56 @@
+.title {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  position: relative;
+}
+/* 标题中的按钮 */
+.title button {
+  width: 100rpx;
+  height: 50rpx;
+  position: absolute;
+  right:4%;
+  top:27%;
+  background-color: #F5C520;
+  color: #fff;
+  padding: 0;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+/* 输入标题样式 */
+.input-title, .input-content {
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 30rpx;
+  width: 100%;
+}
+
+.announce{
+    display: flex;
+     align-items: center;
+     position: relative;
+    width: 98%;
+     height: 100rpx;
+     margin: 30rpx 0 30rpx;
+     border-bottom: 1px solid #e7e7e7;
+     background: white;
+}
+.name{
+  margin-left: 10px;
+}
+.time{
+  margin-left: 80px;
+  font-size: 0.8rem;
+}
+.r-back{
+    position: absolute;
+    top:50%;
+    margin-top:-14rpx;
+    right:30rpx;
+    width: 15rpx;
+    height: 28rpx;
+}

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="title">关于{{poingMsg.votename}}的投票</view>
+  {{poingMsg.id}}
+  <textarea placeholder="">{{poingMsg.content}}</textarea>
+
+  <!-- 单选框 -->
+    <radio-group class="radio-box" bindchange="radioChange" wx:for="{{list}}">
+      <radio value="{{item.value}}"  checked="{{ status != item.value ? '' : 'aaa' }}" ><text class="radio-content">{{item.name}}</text></radio>
+   
+    </radio-group>
+
+    <!-- 提交按钮 -->
+    <button class="sub-btn" type="primary" bindtap='voting'>提交投票</button>
+</view>

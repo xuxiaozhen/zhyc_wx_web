@@ -1,0 +1,115 @@
+{
+  "pages": [
+    "pages/homes/homes",
+    "pages/notice/notice",
+    "pages/picturesContent/picturesContent",
+    "pages/videosContent/videosContent",
+    "pages/videos/videos",
+    "pages/partySchool/partySchool",
+    "pages/researchContent/researchContent",
+    "pages/users/users",
+    "pages/userInfo/userInfo",
+    "pages/userInfo/changeInfo",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/changePassword/changePassword",
+    "pages/comments/comments",
+    "pages/myComments/myComments",
+    "pages/message/Message",
+    "pages/myCollect/myCollect",
+    "pages/recruit/recruit",
+    "pages/news/news",
+    "pages/threeLessons/threeLessons",
+    "pages/meetNote/meetNote",
+    "pages/partyPublic/partyPublic",
+    "pages/partyMen/partyMen",
+    "pages/topicEducation/topicEducation",
+    "pages/partyMoney/partyMoney",
+    "pages/taskManagement/taskManagement",
+    "pages/myIntegral/myIntegral",
+    "pages/knowledge/knowledge",
+    "pages/eventAlbum/eventAlbum",
+    "pages/addPhoto/addPhoto",
+    "pages/voteAndResearch/voteAndResearch",
+    "pages/voteAndResearchInfo/voteAndResearchInfo",
+    "pages/commemorate/commemorate",
+    "pages/addressBook/addressBook",
+    "pages/assessment/assessment",
+    "pages/myHeart/myHeart",
+    "pages/personal/personal",
+    "pages/OnlineTest/OnlineTest",
+    "pages/MoreTabs/MoreTabs",
+    "pages/newHome/newHome",
+    "pages/MenContent/MenContent",
+    "pages/videoContent/videoContent",
+    "pages/announcement/announcement",
+    "pages/meetNoteContent/meetNoteContent",
+    "pages/meetdetails/meetdetails",
+    "pages/partyLesson/partyLesson",
+    "pages/topicContent/topicContent",
+    "pages/beingContent/beingContent",
+    "pages/policyContent/policyContent",
+    "pages/addAlbum/addAlbum",
+    "pages/meetContent/meetContent",
+    "pages/lessonContent/lessonContent",
+    "pages/articleContent/articleContent",
+    "pages/unJoinmeet/unJoinmeet",
+    "pages/toTestIndex/toTestIndex",
+    "pages/number/number",
+    "pages/toTestIndexAndMore/toTestIndexAndMore",
+    "pages/showPhotoList/showPhotoList",
+    "pages/readCount/readCount",
+    "pages/qiandaoCount/qiandaoCount"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#E82E2F",
+    "color": "#fff",
+    "selectedColor": "#F5C520",
+    "list": [
+      {
+        "pagePath": "pages/homes/homes",
+        "text": "首页",
+        "iconPath": "icons/tabbar1.png",
+        "selectedIconPath": "icons/tabbar1-active.png"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "新闻",
+        "iconPath": "icons/tabbar2.png",
+        "selectedIconPath": "icons/tabbar2-active.png"
+      },
+      {
+        "pagePath": "pages/partySchool/partySchool",
+        "text": "党校",
+        "iconPath": "icons/tabbar3.png",
+        "selectedIconPath": "icons/tabbar3-active.png"
+      },
+      {
+        "pagePath": "pages/videos/videos",
+        "text": "组织",
+        "iconPath": "icons/tabbar4.png",
+        "selectedIconPath": "icons/tabbar4-active.png"
+      },
+      {
+        "pagePath": "pages/users/users",
+        "text": "个人",
+        "iconPath": "icons/tabbar5.png",
+        "selectedIconPath": "icons/tabbar5-active.png"
+      }
+    ]
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.1.1",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+}

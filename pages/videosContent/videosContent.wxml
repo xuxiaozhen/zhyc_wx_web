@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="title">党员档案</view>
+  <view class="personal">个人电子名片</view>
+  <view class="personal-information">
+    <image class="photo"></image>
+    <view class="message">
+      <view class="row">
+        <text>姓名：{{videosMsg.name}}</text>
+        <text>座机：{{videosMsg.phone}}</text>
+      </view>
+      <view class="row">
+        <text>部门：{{videosMsg.deptname}}</text>
+        <text>生日：{{videosMsg.birthdate}}</text>
+      </view>
+      
+      <!-- <text>部门：</text>
+      <text>电话：</text> -->
+    </view>
+  </view>
+
+  <view class="member" bindtap='toPersonalList'>
+    成员列表
+  </view>
+
+</view>

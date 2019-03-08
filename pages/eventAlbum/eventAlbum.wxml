@@ -1,0 +1,61 @@
+<!-- 活动相册页面 -->
+<view class="container">
+  <view class="title">活动相册</view>
+  <!-- 搜索盒子 -->
+  <view class="search-box">
+    <input 
+    type="text" 
+    placeholder="搜索"
+    maxlength="30"
+    placeholder-class="placeholder-style"
+    />
+    </view>
+  </view>
+  <!-- 相册模块 -->
+  <navigator class="album-box" wx:for="{{albumList}}" url="../../pages/addPhoto/addPhoto?id={{item.id}}">
+    <!-- 头像 -->
+    <image class="avatar"></image>
+    <!-- 中间描述文字 -->
+    <view class="content">
+      <text>{{item.createtime}}活动相册</text>
+      <text>{{item.describe}}活动相册</text>
+    </view>
+    <!-- 进入图标 -->
+  <image class="enter" src='../../icons/right-back.png'></image>
+  <!-- 查看照片列表 -->
+  <navigator class="morePhoto" url="../../pages/showPhotoList/showPhotoList?id={{item.id}}">更多照片</navigator>
+  </navigator> 
+  
+  <!-- <navigator class="album-box" url="../../pages/addPhoto/addPhoto"> 
+    <!-- 头像 -->
+    <!-- <image class="avatar"></image> -->
+    <!-- 中间描述文字 -->
+    <!-- <view class="content">
+      <text>2019-2-20活动相册</text>
+      <text>xxx活动相册</text>
+    </view> -->
+    <!-- 进入图标 -->
+    <!-- <image class="enter" src='../../icons/right-back.png'></image>
+  </navigator>
+  <navigator class="album-box" url="../../pages/addPhoto/addPhoto"> -->
+    <!-- 头像 -->
+    <!-- <image class="avatar"></image> -->
+    <!-- 中间描述文字 -->
+    <!-- <view class="content">
+      <text>2019-2-20活动相册</text>
+      <text>xxx活动相册</text>
+    </view> -->
+    <!-- 进入图标 -->
+    <!-- <image class="enter" src='../../icons/right-back.png'></image>
+  </navigator>
+  <navigator class="album-box" url="../../pages/addPhoto/addPhoto"> -->
+    <!-- 头像 -->
+    <!-- <image class="avatar"></image> -->
+    <!-- 中间描述文字 -->
+    <!-- <view class="content">
+      <text>2019-2-20活动相册</text>
+      <text>xxx活动相册</text>
+    </view> -->
+    <!-- 进入图标 -->
+    <!-- <image class="enter" src='../../icons/right-back.png'></image>
+  </navigator>

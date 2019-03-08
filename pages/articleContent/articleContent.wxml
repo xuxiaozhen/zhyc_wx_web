@@ -1,0 +1,16 @@
+<!--pages/articleContent/articleContent.wxml-->
+<!--pages/lessonContent/lessonContent.wxml-->
+<!--pages/meetContent/meetContent.wxml-->
+<view class="container">
+  <view class="title">专题教育情况</view>
+  <view class='detail1'>您已阅读过的文章</view> 
+  <view class='detail' wx:for="{{yearlist}}">       
+  <view class='date'>{{item.articlename}}</view>
+<view class='c'>
+  <view class='content'>阅读次数：{{item.read_count}}</view>
+   <view class='content1'>秒数：{{item.read_time_count}}</view>
+</view>
+  </view>  
+</view>
+
+

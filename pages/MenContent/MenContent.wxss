@@ -1,0 +1,29 @@
+/* 版心样式 */
+.container {
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx 0;
+  font-size: 20px;
+}
+
+/* 发布时间与发布作者的样式 */
+.msg-box {
+  color: #888;
+  font-size: 14px;
+  padding: 0 40rpx;
+}
+.msg-box text:last-child {
+  margin-left: 5%
+}
+
+/* 内容样式 */
+.content {
+  margin-top: 6%;
+}

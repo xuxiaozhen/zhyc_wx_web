@@ -1,0 +1,60 @@
+/* ======================每日一答模块样式_start====================== */
+.testEveryDay {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 3%;
+  padding: 20rpx 0 30rpx 20rpx;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-right: 20rpx;
+}
+.header navigator {
+  color: #9E9E9E;
+  font-size: 16px;
+}
+/* 每日一答列表相关样式 */
+.TED-list {
+  width: 100%;
+}
+.TED-list .item {
+  padding: 20rpx 0 20rpx 0;
+  width: 100%;
+  border-top: 1rpx solid #ccc;
+  box-sizing: content-box;
+}
+.TED-list .item:first-of-type {
+  margin-top: 3%;
+  border-top: none;
+}
+.item .content {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20rpx;
+}
+.content .left {
+  display: flex;
+  flex-direction: column;
+}
+.content .left text:last-of-type {
+  color: #9E9E9E;
+  font-size: 14px;
+  margin-top: 5%;
+}
+.content .left text:first-of-type {
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.startTestBtn {
+  align-self: center;
+  border: 1rpx solid #9E9E9E;
+  border-radius: 40rpx;
+  padding: 10rpx 18rpx;
+  font-size: 16px;
+}
+/* ======================每日一答模块样式_end====================== */

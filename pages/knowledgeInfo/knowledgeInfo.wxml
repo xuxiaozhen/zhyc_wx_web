@@ -1,0 +1,20 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<!-- 党建知识库的详情页面 -->
+<view class="container">
+
+  <!-- 标题部分 -->
+  <view class="title">
+    <text>{{ articleMsg.articlename }}</text>
+  </view>
+  
+  <!-- 发布时间与发布作者 -->
+  <view class="msg-box">
+    <text>{{ articleMsg.fbsj }}</text>
+    <text>{{ articleMsg.source }}</text>
+  </view>
+
+  <!-- 内容区域，是需要被解析的HTML代码 -->
+  <view class="content">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>

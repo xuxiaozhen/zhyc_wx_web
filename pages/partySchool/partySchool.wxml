@@ -1,0 +1,165 @@
+<!--pages/notice/notice.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class="container">
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">微党课</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">三会一课</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">专题教育</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">防腐倡廉</view>
+    <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">政策法规</view>
+  </scroll-view>
+
+
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+
+    <!-- 微党课 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <!-- 下方的内容区域 -->
+          <view class="content">
+            <view class="announce" bindtap="userLogin">
+              <view class='xian'></view>
+            <view class="name">微党课</view>
+          </view>
+            <!-- 视屏区域 -->
+            <navigator class="video-box" wx:for="{{ partyLessonList }}" url='../newHome/newHome?id={{ item.id }}'>
+              <view class="video">{{ item.articlename }}</view>
+            </navigator>
+
+            <!-- 点击加载更多按钮(党建要闻) -->
+            <view class="getMoreBtn">
+              <button bindtap="getMore">加载更多</button>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+      <!-- 点击直接去考试 -->
+       <navigator class="toTest" url="../../pages/toTestIndex/toTestIndex">我要考试</navigator>  
+    </swiper-item>
+
+    <!-- 三会一课 -->
+      <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="bindViewAnnounce">
+            <view class='xian'></view>
+            <view class="name">三会一课</view>
+          </view>
+          <view class="messagebg">
+          <view class='topTabSwiper'>
+          <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}'  data-current = "0" bindtap='checkCurrent'>会议通知</view>
+          <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}'  data-current = "1" bindtap='checkCurrent'>会议消息</view>
+          <!-- <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}'  data-current = "2" bindtap='checkCurrent'>关注</view> -->
+          </view>
+          <swiper current="{{currentData}}" class='swiper' style="height:600px;" duration="300" bindchange="bindchange">
+            <swiper-item>
+            <view class='swiper_con'>
+         <navigator class='content1' wx:for="{{threeLessonNoteList}}"  url='../meetNoteContent/meetNoteContent?id={{item.id}}'>
+            <text class='meet'>{{item.name}}召开会议</text>
+            <button class='over'>{{item.type}}</button>
+            <view class='note'>
+            <!-- <template is="wxParse" data="{{wxParseData:article.nodes}}"/> -->
+            </view>
+            <text class='time'>将于{{item.createtime}}召开</text>
+            <text class='time1'>发起人{{item.deptid}}</text>
+          </navigator>
+            </view>
+            </swiper-item>
+            <swiper-item><view class='swiper_con'>
+            <navigator class='content1' wx:for="{{threeLessonList}}" url='../meetdetails/meetdetails?id={{item.id}}'>
+            <text class='meet'>{{item.name}}召开会议</text>
+            <button class='over'>{{item.type}}</button>
+            <view class='note'>{{item.content}}</view>
+            <text class='time'>将于{{item.createtime}}召开XXX会议</text>
+            <text class='time1'>发起人{{item.deptid}}</text>
+          </navigator>
+            </view></swiper-item>
+          </swiper>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 专题教育 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="userLogin">
+            <view class='xian'></view>
+            <view class="name">专题教育</view>
+          </view>
+
+          <navigator class='topicBg' wx:for="{{educationList}}" url='../newHome/newHome?id={{ item.id }}'>
+            <view class='titleName'>
+              <view class='title'>{{item.articlename}}</view>
+            </view>
+            <view class='pic'></view>
+            <view class='topicFoot'>
+              <view class='topicTime'>
+                <text class='time2'>{{item.fbsj}}</text>
+              </view>
+              <view class='topicCount'>
+                <text class='time2'>{{item.read_count}}</text>
+              </view>
+            </view>
+          </navigator>
+
+        </block>
+      </scroll-view>
+      <!-- 点击直接去考试 -->
+       <navigator class="toTest" url="../../pages/toTestIndex/toTestIndex">我要考试</navigator>  
+    </swiper-item>
+    <!-- 防腐倡廉-->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="userLogin">
+            <view class='xian'></view>
+            <view class="name">防腐倡廉</view>
+          </view>
+
+          <navigator class='topicBg' wx:for="{{integrityList}}"  url='../newHome/newHome?id={{item.id}}'>
+            <view class='titleName1'>{{item.articlename}}</view>
+            <view class='pic1'>{{item.id}}</view>
+            <view class='topicFoot'>
+              <view class='topicTime'>
+                <text class='time2'>{{item.fbsj}}</text>
+              </view>
+              <view class='topicCount'>
+                <text class='time2'>{{item.source}}</text>
+              </view>
+            </view>
+          </navigator>
+
+         
+        </block>
+      </scroll-view>
+      <!-- 点击直接去考试 -->
+       <navigator class="toTest" url="../../pages/toTestIndex/toTestIndex">我要考试</navigator>  
+    </swiper-item>
+
+
+    <!-- 政策法规-->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="userLogin">
+            <view class='xian'></view>
+            <view class="name">政策法规</view>
+          </view>
+          <navigator class='Divnote' wx:for="{{legislationList}}"  url='../newHome/newHome?id={{item.id}}'>
+            <view class='title'>{{item.articlename}}</view>
+            <view class='noticeTime'>
+              <view class='come'>{{item.fbsj}}</view>
+              <view class='time3'>{{item.source}}</view>
+            </view>
+          </navigator> 
+        </block>
+      </scroll-view>
+      <!-- 点击直接去考试 -->
+      <navigator class="toTest" url="../../pages/toTestIndex/toTestIndex">我要考试</navigator>  
+    </swiper-item>
+  </swiper>
+</view>

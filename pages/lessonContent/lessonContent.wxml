@@ -1,0 +1,11 @@
+<!--pages/lessonContent/lessonContent.wxml-->
+<!--pages/meetContent/meetContent.wxml-->
+<view class="container">
+  <view class="title">微党校课程情况</view>
+ <!-- <view class='detail1'>学习进度80%</view> -->
+<view class='detail' wx:for="{{lessonlist}}">       
+<view class='date'>{{item.articlename}}</view>
+<view class='content'>{{item.read_time_count}}</view>
+</view>  
+  </view>
+

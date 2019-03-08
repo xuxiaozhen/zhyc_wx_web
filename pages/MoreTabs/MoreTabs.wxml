@@ -1,0 +1,28 @@
+<!--pages/MoreTabs/MoreTabs.wxml-->
+<!-- 小图标部分 -->
+<view class='foot'>
+
+<view class="container">
+    <view class="weui-grids" bindlongpress="toggleIcon">
+        <view class="weui-grid" wx:for="{{ homesMoreList }}" wx:key="{{ item.id }}">
+            <view>
+                <view class='weui-grid__bg'>
+                    <view class="weui-grid__icon">
+                        <image src=" {{item.icon}}" mode="scaleToFill" />
+                    </view>
+                    <text class="weui-grid__label">{{item.name}}</text>
+                </view>
+            </view>
+            <!-- 编辑按钮 -->
+            <view 
+            class="edit-icon {{ isHide ? 'hide' : '' }}" 
+            bindtap="editIcon" data-id='{{ item.id }}' 
+            data-status='{{ item.enabled }}'
+            data-iconname="{{ item.name }}"
+            >{{ item.enabled === '展示' ? '-' : '+' }}</view>
+        </view>
+    </view>
+</view>
+
+
+</view>

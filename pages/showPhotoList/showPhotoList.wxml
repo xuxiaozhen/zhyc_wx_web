@@ -1,0 +1,6 @@
+<!-- 展示照片的页面 -->
+<view class="container">
+  <view class="photo-box">
+    <image class="photo" wx:for="{{ photoList }}" src="{{ item.name }}" wx:key="{{ item.id }}"></image>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<!-- 投票与调研页面 -->
+<view class="container">
+  <view class="title">投票调研</view>
+   
+  <!-- 投票调研内容部分 -->
+  <navigator class="content-box"  wx:for="{{polingList}}" url="../../pages/voteAndResearchInfo/voteAndResearchInfo?id={{item.id}}">
+    <view class="content">
+      <view>{{item.votename}}</view>
+      <text class="date">发起日期：{{item.createtime}}</text>
+    </view>
+    <image class="enter" src="../../icons/right-back.png"></image>
+  </navigator>
+ <!-- 加载更多的按钮 -->
+ 
+           <view class='getMoreBtn'>
+            <button  bindtap="getMore">加载更多</button>
+           </view>
+ 
+</view>

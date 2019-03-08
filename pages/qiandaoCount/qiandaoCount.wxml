@@ -1,0 +1,15 @@
+<!--pages/qiandaoCount/qiandaoCount.wxml-->
+<view class="announce">
+           <view class='xian'></view>
+            <view class="name">签到情况</view>
+          </view>
+
+        <navigator class='Divnote' wx:for="{{qiandaoList}}">
+            <view class='title'>{{item.deptid}}</view>
+            <view class='noticeTime'>
+              <text class='come'>{{item.personid}}</text> 
+              <view class='time'>{{item.u_date}}</view>
+            </view>
+             </navigator>
+       
+

@@ -1,0 +1,228 @@
+page {
+  padding: 0;
+  height: 100%;
+}
+
+
+.tab-h {
+  height: 80rpx;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 80rpx;
+  background: #f7f7f7;
+  font-size: 16px;
+  white-space: nowrap;
+  position: static;
+}
+
+.tab-item {
+  text-align: center;
+  display: inline-block;
+  width: 25%;
+}
+
+.tab-item.active {
+  background-color: #FF8385;
+  color: #fff;
+  position: relative;
+}
+
+/* start */
+.item-person {
+  border-bottom: 1rpx solid #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25rpx 40rpx;
+  box-sizing: border-box;
+}
+.item-person .footnote {
+  font-size: 12px;
+  color: #a8a8a8;
+  margin-top: 2%;
+}
+.person-content {
+  display: flex;
+}
+.person-content .avatar {
+  width:230rpx;
+  height:230rpx;
+  background-color: #ccc;
+  display: block;
+}
+.Introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20rpx 0;
+  margin-left: 3%;
+}
+.Introduction .title {
+  font-size: 18px;
+  margin-left: 0;
+}
+.Introduction .main {
+  font-size: 14px;
+  overflow: hidden;
+  margin-top: 2%;
+  color: #a8a8a8;
+  height: 115rpx;
+}
+/* end */
+
+.askBtn {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 60rpx;
+  border: 1px solid #4675f9;
+  color: #4675f9;
+}
+
+.announce {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  padding: 30rpx 0;
+  align-items: center;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.name {
+  margin-left: 10px;
+}
+
+.Div {
+  width: 100%;
+  /* margin: 30rpx 0 30rpx; */
+  border-bottom: 1px solid #e7e7e7;
+}
+.Divnote{
+  width: 100%;
+  margin: 30rpx 0 30rpx;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.title {
+  margin-left: 10rpx;
+  /* font-weight: bold; */
+}
+
+.img {
+  margin-top: 5rpx;
+  margin-left: 30rpx;
+  width: 90%;
+  height: 300rpx;
+  background-color: #e5e5e5;
+}
+
+.noticeTime {
+  width: 90%;
+  height: 40rpx;
+  background-color: #fff;
+}
+
+.tl {
+  float: left;
+  width: 100%;
+}
+
+.come {
+  float: left;
+  width: 45%;
+  margin-left: 20rpx;
+  font-size: 0.6rem;
+  color: #a89494;
+}
+
+.time {
+  float: right;
+  text-align: right;
+  width: 45%;
+  font-size: 0.6rem;
+  color: #a89494;
+}
+
+.img1 {
+  margin-top: 5rpx;
+  margin-left: 30rpx;
+  float: left;
+  width: 40%;
+  height: 200rpx;
+  background-color: #e5e5e5;
+}
+
+.article {
+  float: left;
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  /* background-color: #E5E5E5; */
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.tab-content {
+  margin-top: 0;
+  height: 1000rpx;
+}
+
+.scoll-h {
+  height: 100%;
+}
+
+.xian {
+  width: 10rpx;
+  height: 40rpx;
+  background-color: red;
+  margin-left: 15px;
+}
+
+/* 加载更多按钮样式 */
+.getMoreBtn {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 5%;
+  
+}
+.getMoreBtn button {
+  background-color: #E84F50;
+  color: #fff;
+}
+
+/* start */
+.item {
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #eee;
+  box-sizing: border-box;
+}
+.item .title {
+  margin-left: 0;
+}
+.item .picture {
+  width: 100%;
+  height: 350rpx;
+  display: block;
+  background-color: #ccc;
+  margin-top: 5%;
+}
+.item .footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4%;
+}
+.item .footer text {
+  font-size: 12px;
+  color: #AFAFAF;
+}
+
+/* end */
+
+.hide {
+  display: none;
+}

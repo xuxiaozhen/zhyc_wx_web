@@ -1,0 +1,25 @@
+<!-- 添加照片页面 -->
+<view class="container">
+    <text>照片介绍</text>
+  <view class="title">
+
+    <input type='text' bindinput='getalbumName' placeholder='' value='{{picinfo}}'  />
+  </view>
+  
+  <!-- 添加按钮 -->
+  <view class="addPhoto-box">
+    <view class="add-btn" bindtap='uploadPic'>
+    </view>
+  </view>
+
+  <!-- 缩略图 -->
+  <view class="thumbnail">
+    <view class="thumbnail-box" wx:for="{{ images }}">
+      <image class="thumbnail-img" src="{{ item }}" bindtap="checkPhoto"></image>
+      <button class="rm-btn" bindtap="removePhoto"></button>
+    </view>
+  </view>
+
+  <!-- 提交按钮 -->
+  <button class="submit" type="primary" bindtap='submitphoto'>提交照片</button>
+</view>

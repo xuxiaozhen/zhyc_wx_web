@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="title">我的心声
+    <button class="submit" bindtap='submit'>提交</button>
+  </view>
+
+  <!-- 输入标题 -->
+  <input class="input-title" bindinput='getTitle' placeholder="输入标题"></input>
+
+  <!-- 输入内容 -->
+  <textarea class="input-content" bindinput='getContent' placeholder="输入内容"></textarea>
+</view>
+
+
+ <navigator class="announce" wx:for="{{myheartlist}}" url='../personal/personal?id={{item.id}}'>
+   <view class="name" >{{item.title}} <text class='time'> {{item.createtime}}</text></view>
+   <image src="../../icons/right-back.png" class="r-back"> </image>
+</navigator> 
+ <!-- 加载更多的按钮 -->
+            <button type="primary" bindtap="getMore">加载更多</button>
+ 
+ <!-- <view class="announce" bindtap="bindViewTapHeartPerson">
+   <view class="name" >2018-12-12号记录</view>
+   <image src="../../icons/right-back.png" class="r-back"> </image>
+</view>
+ <view class="announce" bindtap="bindViewTapHeartPerson">
+   <view class="name" >2018-12-12号记录</view>
+   <image src="../../icons/right-back.png" class="r-back"> </image>
+</view>
+ <view class="announce" bindtap="bindViewTapHeartPerson">
+   <view class="name" >2018-12-12号记录</view>
+   <image src="../../icons/right-back.png" class="r-back"> </image>
+</view>
+ <view class="announce" bindtap="bindViewTapHeartPerson">
+   <view class="name" >2018-12-12号记录</view>
+   <image src="../../icons/right-back.png" class="r-back"> </image>
+</view> -->

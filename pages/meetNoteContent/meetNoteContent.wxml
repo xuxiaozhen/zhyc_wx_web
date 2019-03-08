@@ -1,0 +1,19 @@
+<!--pages/meetNoteContent/meetNoteContent.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<view class='note'>
+<text class='name'>将于{{dataMsg.createtime}}号召开会议</text>
+</view>
+<view class='note'>
+<text class='name'>{{dataMsg.name}}</text>
+</view>
+<view class='content'>
+
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+</view>
+<!-- <view class='foot'>
+<view class='name1'>XXX部</view>
+<view class='time'>2018-12-09</view>
+</view> -->
+

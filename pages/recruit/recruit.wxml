@@ -1,0 +1,79 @@
+<!-- 考试详情页面 -->
+<view class="continer">
+  <view class="title">考试详情页面————{{ index + 1 }}/10</view>
+
+  <scroll-view class="test-content">
+
+    <!-- 题目类型 -->
+    <view class="timu-type">{{ quectionList[index].questions_type }}</view>
+
+    <!-- 题干 -->
+    <view class="timu-title">{{ quectionList[index].questions_name }}</view>
+
+    <!-- 选项 -->
+    <view class="select">
+    
+      <!-- 单选题的单选框盒子 -->
+      <radio-group class="select-box {{ quectionList[index].questions_type == '单选题' ? '' : 'hide' }}" bindchange="selectAnswer">
+        <label>
+          <view class="radio" >
+            <radio value="A" checked="{{ checkStatus === 1 ?  '' : 'false' }}"></radio>
+            <text>A.{{ quectionList[index].optionsList[0].option_name }}</text>
+          </view>
+        </label>
+        <label>
+          <view class="radio">
+            <radio value="B" checked="{{ checkStatus === 1 ?  '' : 'false' }}"></radio>
+            <text>B.{{ quectionList[index].optionsList[1].option_name }}</text>
+          </view>
+        </label>
+        <label>
+          <view class="radio">
+            <radio value="C" checked="{{ checkStatus === 1 ?  '' : 'false' }}"></radio>
+            <text>C.{{ quectionList[index].optionsList[2].option_name }}</text>
+          </view>
+        </label>
+        <label>
+          <view class="radio">
+            <radio value="D" checked="{{ checkStatus === 1 ?  '' : 'false' }}"></radio>
+            <text>D.{{ quectionList[index].optionsList[3].option_name }}</text>
+          </view>
+        </label>
+      </radio-group>
+
+      <!-- 多选题盒子 -->
+      <checkbox-group class="select-box {{ quectionList[index].questions_type == '单选题' ? 'hide' : '' }}" bindchange="selectAnswer">
+        <label>
+          <view class="radio">
+            <checkbox value="A"></checkbox>
+            <text>A.{{ quectionList[index].optionsList[0].option_name }}</text>
+          </view>
+        </label>
+        <label>
+          <view class="radio">
+            <checkbox value="B"></checkbox>
+            <text>B.{{ quectionList[index].optionsList[1].option_name }}</text>
+          </view>
+        </label>
+        <label>
+          <view class="radio">
+            <checkbox value="C"></checkbox>
+            <text>C.{{ quectionList[index].optionsList[2].option_name }}</text>
+          </view>
+        </label>
+        <label>
+          <view class="radio">
+            <checkbox value="D"></checkbox>
+            <text>D.{{ quectionList[index].optionsList[3].option_name }}</text>
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+    <!-- 按钮盒子 -->
+    <view class="btn-box">
+      <button class="{{ index === 9 ? 'hide' : '' }}" bindtap="nextQue" data-score="{{ quectionList[index].score }}" data-trueop="{{ quectionList[index].true_option }}" data-id="{{ quectionList[index].id }}">下一题</button>
+      <button bindtap="lastQue" disabled="{{ index === 0 ? 'true' : '' }}">上一题</button>
+      <button class="submit {{ index === 9 ? '' : 'hide' }}" bindtap="submit">提交</button>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,122 @@
+<!--pages/notice/notice.wxml-->
+
+<view>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">党建要闻</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">通知公告</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">党内公示</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">党史人物</view>
+  </scroll-view>
+
+
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+
+    <!-- 党建要闻 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+
+          <view class="announce" bindtap="userLogin">
+            <view class='xian'></view>
+            <view class="name">党建要闻</view>
+          </view>
+
+          <navigator class='Div' url='../newHome/newHome' data-id="{{ item.id }}" wx:for="{{ importantNewsList }}">
+            <view class='title'>{{item.articlename}}</view>
+            <image class='img'></image>
+            <view class='tl'>
+              <view class='noticeTime'>
+                <view class='come'>{{item.source}}</view>
+                <view class='time'>{{item.sbsj}}</view>
+              </view>
+            </view>
+         </navigator>
+
+        <navigator class='Div' >
+            <view class='title'>{{item.articlename}}</view>
+            <view class='bg'>
+              <image class='img1'></image>
+              <view class='li'></view>
+              <image class='img1'></image>
+            </view>
+            <view class='tl'>
+              <view class='noticeTime'>
+                <view class='come'>{{item.source}}</view>
+                <view class='time'>{{item.sbsj}}</view>
+              </view>
+            </view>
+          </navigator>
+
+          <view class='article'>{{item.articlename}}</view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 通知公告 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="bindViewAnnounce">
+           <view class='xian'></view>
+            <view class="name">通知公告</view>
+          </view>
+
+           <navigator class='Divnote' url='../newsContent/newsContent'data-id="{{ item.id }}" wx:for="{{ placardList }}">
+            <view class='title'>{{ item.articlename }}</view>
+            <view class='noticeTime'>
+              <text class='come'>{{item.fbsj}}</text> 
+              <view class='time'>{{item.read_count}}</view>
+            </view>
+         </navigator>
+
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 党内公示 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="userLogin">
+              <view class='xian'></view>
+            <view class="name">党内公示</view>
+          </view>
+
+          <navigator class='Divnote' url='../publicCotent/publicCotent' data-id="{{ item.id }}" wx:for="{{ placardList }}">
+            <view class='title'>{{ item.articlename }}</view>
+            <view class='noticeTime'>
+              <view class='come'>{{item.sbsj}}</view>
+              <view class='time'>{{item.read_count}}</view>
+            </view>
+        </navigator>
+
+        </block>
+      </scroll-view>
+    </swiper-item>
+    <!-- 党史人物-->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+
+          <view class="announce" bindtap="">
+             <view class='xian'></view>
+            <view class="name">党史人物</view>
+          </view>
+
+          <navigator class="item-ans" url='../MenContent/MenContent' wx:for="{{ partyHumanList }}">
+            <view class="avatar">
+              <image class="img" src="../../icons/chen.jpg"></image>
+            </view>
+            <view class="expertInfo">
+              <view class="name">{{item.articlename}}</view>
+              <view class="tag">男，名世俊，字仲弘，四川乐至人，中国共产党员。久经考验的无产阶级革命...</view>
+              <view class="answerHistory">{{item.source}} </view>
+            </view>
+          </navigator>
+
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+
+</view>

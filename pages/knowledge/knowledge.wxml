@@ -1,0 +1,85 @@
+<!-- 党建知识库页面 -->
+<view class="container">
+  <!-- 头部标题 -->
+  <view class="title">党建知识库</view>
+</view>
+<view class="page">
+
+  <!-- 滑块以及滑块下的内容 -->
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">全部</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">组织工作            </view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">党建教育            </view>
+        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">党建视频            </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+     <!-- 每一个滑块中的内容 -->
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+              <!-- 全部 -->
+              <navigator class="knows-box" wx:for="{{ allList }}" wx:key="{{ item.id }}" url="../../pages/newHome/newHome?id={{ item.id }}">
+                  <image src="{{ item.photo }}"></image>
+                  <view class="content">
+                    <text>{{ item.articlename }}</text>
+                    <!-- 脚注 -->
+                    <view class="footnote">
+                      <text>作者：{{ item.source }}</text>
+                      <text>{{ item.fbsj }}</text>
+                    </view>
+                  </view>
+              </navigator>
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+              <!-- 组织工作 -->
+              <navigator class="knows-box" wx:for="{{ jobsList }}" wx:key="{{ item.id }}" url="../../pages/newHome/newHome?id={{ item.id }}">
+                  <image src="{{ item.photo }}"></image>
+                  <view class="content">
+                    <text>{{ item.articlename }}</text>
+                    <!-- 脚注 -->
+                    <view class="footnote">
+                      <text>作者：{{ item.source }}</text>
+                      <text>{{ item.fbsj }}</text>
+                    </view>
+                  </view>
+              </navigator>
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+              <!-- 党建教育 -->
+              <navigator class="knows-box" wx:for="{{ educationList }}" wx:key="{{ item.id }}" url="../../pages/newHome/newHome?id={{ item.id }}">
+                  <image src="{{ item.photo }}"></image>
+                  <view class="content">
+                    <text>{{ item.articlename }}</text>
+                    <!-- 脚注 -->
+                    <view class="footnote">
+                      <text>作者：{{ item.source }}</text>
+                      <text>{{ item.fbsj }}</text>
+                    </view>
+                  </view>
+              </navigator>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h" >
+              <!-- 党建视频 -->
+              <navigator class="knows-box" wx:for="{{ videoList }}" wx:key="{{ item.id }}" url="../../pages/newHome/newHome?id={{ item.id }}">
+                  <image src="{{ item.photo }}"></image>
+                  <view class="content">
+                    <text>{{ item.articlename }}</text>
+                    <!-- 脚注 -->
+                    <view class="footnote">
+                      <text>作者：{{ item.source }}</text>
+                      <text>{{ item.fbsj }}</text>
+                    </view>
+                  </view>
+              </navigator>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

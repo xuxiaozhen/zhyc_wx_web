@@ -1,0 +1,43 @@
+<!-- 我要考试主页 -->
+<view class="container">
+  <view class="title-box">
+    <view class="title">
+      <!-- 考试次数 -->
+      <view class="testCount">
+        <!-- 考试次数标题 -->
+        <view class="name">考试次数</view>
+        <!-- 数字 -->
+        <view class="count">{{ dtcs }}</view>
+      </view>
+      <!-- 我的最佳成绩 -->
+      <view class="myBestScore">
+        <!-- 我的最佳成绩标题 -->
+        <view class="name">我的最佳成绩</view>
+        <!-- 数字 -->
+        <view class="count">{{ maxscore }}分</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 每日一答题模块 -->
+  <view class="testEveryDay">
+    <view class="header">
+      <text>每日一答</text>
+      <navigator url="../../pages/toTestIndexAndMore/toTestIndexAndMore">更多></navigator>
+    </view>
+
+    <!-- 每日一答列表 -->
+      <view class="TED-list">
+        <view class="item" wx:for="{{ testList }}" wx:key="{{ item.id }}">
+          <view class="content">
+            <view class="left">
+              <text>{{ item.name }}</text>
+              <text style="{{ item.dtzt == '未作答' ? 'color: #E84F50' : '' }}">{{ item.dtzt == '未作答' ? '未作答' : '已作答' }}</text>
+            </view>
+            <!-- 开始答题按钮 -->
+            <navigator class="startTestBtn" url="../../pages/recruit/recruit?id={{ item.id }}">开始答题</navigator>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>

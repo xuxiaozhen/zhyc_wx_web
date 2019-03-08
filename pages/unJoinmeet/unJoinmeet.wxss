@@ -1,0 +1,61 @@
+/* pages/unJoinmeet/unJoinmeet.wxss */
+
+/* pages/meetContent/meetContent.wxss */
+.title {
+  float: left;
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.meet{
+  margin-top: 2px;
+  float: left;
+  width: 100%;
+  height: 90rpx;
+  border-bottom:  1px solid #ccc;
+/* background-color: pink; */
+}
+.meetMsg{
+  float: left;
+  width: 49%;
+  height: 90rpx;
+   line-height: 90rpx;
+  text-align: center;
+  color: red;
+  border-left: 1px solid #ccc;
+
+}
+.meetMsg1{
+  float: left;
+  width: 50%;
+  height: 90rpx;
+   line-height: 90rpx;
+  text-align: center;
+ 
+}
+.detail{
+  float: left;
+  width: 100%;
+  height: 120rpx;
+ border-bottom:  1px solid #ccc;
+}
+.date{
+  float: left;
+  margin-left: 5rpx;
+  width: 100%;
+  height: 80rpx;
+  /* background-color: rebeccapurple; */
+}
+.content{
+  margin-top: -10rpx;
+  margin-left: 5rpx;
+  float: left;
+  width: 100%;
+  height: 35rpx;
+  color: #ccc;
+  /* font-size: 0.7rem; */
+  /* background-color:red; */
+}

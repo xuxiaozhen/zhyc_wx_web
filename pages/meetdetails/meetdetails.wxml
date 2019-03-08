@@ -1,0 +1,46 @@
+<!--pages/meetdetails/meetdetails.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='container'>
+<text class='meetName'>关于{{dataMsg.name}}问题的会议</text>
+<view class='meetContent'>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+ <view class="footer">
+      <text>发起人：{{dataMsg.xxzl}}</text>
+      <navigator>会议日期：</navigator>
+    </view>
+<!-- 已读签到模块 -->
+   <view class='details'>
+    <!-- <view class="footer">
+    <text>{{dataMsg.yd_cont}}/12已读</text>
+    <navigator url='../readCount/readCount?id={{dataMsg.id}}'>查看详情</navigator>
+        <image src="../../icons/right-back.png"></image>
+    </view> -->
+        <view class="footer">
+    <text>{{dataMsg.qd_y_count}}/{{dataMsg.qd_count}}签到</text>
+    <navigator url='../qiandaoCount/qiandaoCount?id={{dataMsg.id}}'>查看详情</navigator>
+        <image src="../../icons/right-back.png"></image>
+    </view>
+   </view> 
+
+   <!-- 会议资料模块
+<view class="footer">
+   <text>会议资料</text>
+   </view> 
+    <view class="footer">
+    <text>PDF资料</text>
+        <image src="../../icons/right-back.png"></image>
+    </view>
+   <view class="footer">
+    <text>word资料</text>
+        <image src="../../icons/right-back.png"></image>
+    </view>
+   <view class="footer">
+    <text>PPT资料</text>
+        <image src="../../icons/right-back.png"></image>
+    </view> -->
+  
+</view>
+
+
+

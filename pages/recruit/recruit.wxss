@@ -1,0 +1,104 @@
+.container {
+  background-color: #F6F6F6;
+  height: 1000rpx;
+  padding: 0 20rpx;
+}
+/* 标题样式 */
+.title {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+/* ==============题目内容模块 start ====================== */
+.test-content {
+  height: 1000rpx;
+  margin-top: 8%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+/* 题干 */
+.timu-title {
+  margin-top: 5%;
+  font-size: 18px;
+}
+.select-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+.select-box radio, .select-box checkbox {
+  padding: 20rpx 20rpx;
+  margin: 10rpx 0;
+  font-size: 16px;
+}
+.radio {
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+  border-bottom: 1rpx solid #F6F6F6;
+}
+.radio text {
+  font-size: 15px;
+}
+
+/* ================== 自定义修改单选框小圆点样式 start ======================== */
+radio .wx-radio-input{
+    border-radius: 50%; 
+    width: 26rpx;
+    height: 26rpx;
+}
+/* 选中后的样式 （可根据设计稿需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+    width: 44rpx; 
+    height: 44rpx; 
+    line-height: 44rpx;
+    text-align: center;
+    font-size: 26rpx; /* 对勾大小 26rpx */
+    color:#fff; /* 对勾颜色 */
+    background: #E84F50;
+    border-color: #E84F50;
+}
+/* ================== 自定义修改单选框小圆点样式 end ========================== */
+
+/* ================== 自定义修改多选框小方框样式 start ======================== */
+checkbox .wx-checkbox-input{
+    border-radius: 5rpx; 
+    width: 26rpx;
+    height: 26rpx;
+}
+/* 选中后的样式 （可根据设计稿需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+    border-radius: 5rpx;
+    width: 44rpx; 
+    height: 44rpx; 
+    line-height: 44rpx;
+    text-align: center;
+    font-size: 28rpx; /* 对勾大小 26rpx */
+    color:#fff; /* 对勾颜色 */
+    background: #E84F50;
+    border-color: #E84F50;
+}
+/* ================== 自定义修改多选框小方框样式 end ========================== */
+
+/* 按钮盒子样式 */
+.btn-box {
+  width: 100%;
+  padding: 0 30rpx;
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 0%;
+  left: 0;
+}
+.btn-box button {
+  margin: 5% 0;
+  color: #fff;
+  background-color: #E84F50
+}
+/* ==============题目内容模块 end ====================== */
+
+.hide {
+  display: none;
+}

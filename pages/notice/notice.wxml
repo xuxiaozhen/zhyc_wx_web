@@ -1,0 +1,119 @@
+<!--pages/notice/notice.wxml-->
+
+<view>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">党建要闻</view>
+    <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">通知公告</view>
+    <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">党内公示</view>
+    <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">党史人物</view>
+  </scroll-view>
+
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+
+    <!-- 党建要闻 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+
+          <view class="announce" bindtap="userLogin">
+            <view class='xian'></view>
+            <view class="name">党建要闻</view>
+          </view>
+
+          <navigator class='item' url='../newHome/newHome?id={{ item.id }}' wx:for="{{ importantNewsList }}" wx:key="{{ item.id }}">
+            <view class="title">
+              {{ item.articlename }}
+            </view>
+            <image class="picture" src="{{ item.photo }}"></image>
+            <view class="footer">
+              <text>来源：{{ item.source }}</text>
+              <text>{{ item.fbsj }}</text>
+            </view>
+         </navigator>
+
+        </block>
+        <!-- 点击加载更多按钮(党建要闻) -->
+        <view class="getMoreBtn {{ importantNewsList.length > 3 ? '' : 'hide' }}">
+          <button bindtap="getMoreToImportantNews">加载更多</button>
+        </view>
+        
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 通知公告 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="bindViewAnnounce">
+           <view class='xian'></view>
+            <view class="name">通知公告</view>
+          </view>
+
+           <navigator class='Divnote' url="../newHome/newHome?id={{ item.id }}" wx:for="{{ noticeList }}" wx:key="{{ item.id }}">
+            <view class='title'>{{ item.articlename }}</view>
+            <view class='noticeTime'>
+              <text class='come'>{{item.fbsj}}</text> 
+              <view class='time' style="{{ item.tz_status == '0' ? 'color: #E84F50' : '' }}">{{ item.tz_status == '0' ? '未读' : '已读' }}</view>
+            </view>
+         </navigator>
+        </block>
+        <!-- 点击加载更多按钮(通知公告) -->
+        <view class="getMoreBtn {{ noticeList.length > 6 ? '' : 'hide' }}">
+          <button bindtap="getMoreToNotice">加载更多</button>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <!-- 党内公示 -->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+          <view class="announce" bindtap="userLogin">
+              <view class='xian'></view>
+            <view class="name">党内公示</view>
+          </view>
+
+          <navigator class='Divnote' url='../newHome/newHome?id={{ item.id }}' wx:for="{{ placardList }}" wx:key="{{ item.id }}">
+            <view class='title'>{{ item.articlename }}</view>
+            <view class='noticeTime'>
+              <view class='come'>{{ item.fbsj }}</view>
+              <view class='time' style="{{ item.tz_status == '0' ? 'color: #E84F50' : '' }}">{{ item.tz_status == '0' ? '未读' : '已读' }}</view>
+            </view>
+        </navigator>
+        <!-- 点击加载更多按钮(党内公示) -->
+        <view class="getMoreBtn {{ placardList.length > 6 ? '' : 'hide' }}">
+          <button bindtap="getMoreToPlacard">加载更多</button>
+        </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+    <!-- 党史人物-->
+    <swiper-item>
+      <scroll-view scroll-y="true" class="scoll-h">
+        <block wx:key="*this">
+
+          <view class="announce" bindtap="">
+             <view class='xian'></view>
+            <view class="name">党史人物</view>
+          </view>
+
+          <navigator class="item-person" url='../newHome/newHome?id={{ item.id }}' wx:for="{{ partyHumanList }}" wx:key="{{ item.id }}">
+            <view class="person-content">
+              <image class="avatar" src="{{ item.photo }}"></image>
+              <view class="Introduction">
+                <text class="title">{{ item.articlename }}</text>
+              </view>
+            </view>
+            <text class="footnote">来源：{{ item.source }}</text>
+          </navigator>
+          <!-- 点击加载更多按钮(党史人物) -->
+        <view class="getMoreBtn {{ partyHumanList.length > 3 ? '' : 'hide' }}">
+          <button bindtap="getMoreToPartyHuman">加载更多</button>
+        </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
+
+</view>

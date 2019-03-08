@@ -1,0 +1,11 @@
+{
+"usingComponents": {
+  "ec-canvas": "../../ec-canvas/ec-canvas"
+
+},
+  "navigationBarBackgroundColor": "#E84A4C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "组织",
+  "backgroundColor": "#fff",
+  "backgroundTextStyle": "light"
+}

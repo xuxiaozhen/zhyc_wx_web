@@ -1,0 +1,14 @@
+<!--pages/unJoinmeet/unJoinmeet.wxml-->
+<!--pages/meetContent/meetContent.wxml-->
+<view class="container">
+  <view class="title">会议详情</view>
+  <view class='meet'>
+  <navigator class='meetMsg1' url='../meetContent/meetContent'>已参与会议</navigator>
+  <navigator class='meetMsg'>未参与会议</navigator>
+  </view>
+<view class='detail'>       
+<view class='date'>2018-11-11会议</view>
+<view class='content'>会议简述xxxxxxxxxxxxxxxxxxx</view>
+</view>  
+  </view>
+

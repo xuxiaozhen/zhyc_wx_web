@@ -1,0 +1,20 @@
+<!-- 每日一答点击更多，查看更多考试列表的页面 -->
+<view class="testEveryDay">
+    <view class="header">
+      <text>考试列表</text>
+    </view>
+
+    <!-- 每日一答列表 -->
+      <view class="TED-list">
+        <view class="item" wx:for="{{ testList }}" wx:key="{{ item.id }}">
+          <view class="content">
+            <view class="left">
+              <text>{{ item.name }}</text>
+              <text style="{{ item.dtzt == '未作答' ? 'color: #E84F50' : '' }}">{{ item.dtzt == '未作答' ? '未作答' : '已作答' }}</text>
+            </view>
+            <!-- 开始答题按钮 -->
+            <navigator class="startTestBtn" url="../../pages/recruit/recruit?id={{ item.id }}">开始答题</navigator>
+          </view>
+        </view>
+      </view>
+  </view>

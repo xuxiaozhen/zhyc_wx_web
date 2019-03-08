@@ -1,0 +1,9 @@
+<!--pages/personal/personal.wxml-->
+<view class='rt'>
+<!-- <image class='rtImg' bindtap='myheart' src="../../icons/left-back.png"></image>  -->
+<view class='reture' bindtap='myheart'><text >返回</text> </view>
+<view class='my' bindtap='user'><text>{{myheartmsg.title}}</text> </view>
+</view>
+<view style='color:#ccc'>
+{{myheartmsg.content}}
+</view>

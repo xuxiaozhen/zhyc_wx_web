@@ -1,0 +1,11 @@
+.photo-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.photo {
+  width: 200rpx;
+  height: 200rpx;
+  border: 1rpx solid #ccc;
+  margin: 20rpx;
+}
